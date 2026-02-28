@@ -102,32 +102,6 @@ export default function Hero() {
         }}>
           I'm a sophomore at UF passionate about UX/UI design, game development, and software engineering.
         </p>
-
-        <a
-          href="/Adora_Lin_Resume.pdf"
-          download="Adora_Lin_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="download-resume-hover"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 10,
-            fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "0.9rem",
-            fontWeight: 300,
-            color: "#3d2e2e",
-            textDecoration: "none",
-            letterSpacing: "0.04em",
-          }}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download Resume
-        </a>
       </div>
 
       {/* Right — full-bleed photo, no card/border */}
