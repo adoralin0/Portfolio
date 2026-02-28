@@ -29,45 +29,31 @@ export default function Skills() {
       id="skills"
       style={{
         minHeight: "80vh",
-        background: "#f2c8c8",
-        padding: "80px 7% 80px",
-        position: "relative",
+        display: "flex",
         overflow: "hidden",
       }}
     >
-      {/* Blob — top-right corner (same small peek as Projects) */}
-      <OmbreBlob
-        size={280}
-        blur={55}
-        opacity={0.65}
-        style={{ top: -90, right: -70 }}
-      />
-
-      {/* Blob — large, bottom-right, partially off screen (matches screenshot) */}
-      <OmbreBlob
-        size={500}
-        blur={80}
-        opacity={0.75}
-        style={{ bottom: -180, right: -140 }}
-      />
-
-      <h2 style={{
-        fontFamily: "'Libre Caslon Text', Georgia, serif",
-        fontSize: "clamp(2.5rem, 6vw, 4rem)",
-        fontWeight: 400,
-        color: "#4a3535",
-        letterSpacing: "0.08em",
-        marginBottom: "2.5rem",
-        position: "relative",
-        zIndex: 1,
-      }}>
-        SKILLS
-      </h2>
-
-      <div style={{ display: "flex", gap: "4%", alignItems: "flex-start", position: "relative", zIndex: 1 }}>
-        {/* Left accordion */}
-        <div style={{ flex: "0 0 auto", minWidth: 280 }}>
-          {skills.map((s, i) => (
+      {/* Left panel — solid E9D7CD */}
+      <div
+        style={{
+          flex: "0 0 42%",
+          minWidth: 280,
+          maxWidth: 480,
+          background: "#E9D7CD",
+          padding: "80px 5% 80px 7%",
+        }}
+      >
+        <h2 style={{
+          fontFamily: "'Libre Caslon Text', Georgia, serif",
+          fontSize: "clamp(2.5rem, 6vw, 4rem)",
+          fontWeight: 400,
+          color: "#4a3535",
+          letterSpacing: "0.08em",
+          marginBottom: "2.5rem",
+        }}>
+          SKILLS
+        </h2>
+        {skills.map((s, i) => (
             <div key={i}>
               <button
                 onClick={() => setOpen(open === i ? null : i)}
@@ -75,7 +61,8 @@ export default function Skills() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 16,
+                  justifyContent: "space-between",
+                  gap: 12,
                   background: "none",
                   border: "none",
                   cursor: "pointer",
@@ -85,6 +72,8 @@ export default function Skills() {
                 }}
               >
                 <span className="accordion-btn-text" style={{
+                  flex: 1,
+                  minWidth: 0,
                   fontFamily: "'Lexend Giga', sans-serif",
                   fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
                   fontWeight: 400,
@@ -94,34 +83,59 @@ export default function Skills() {
                   {s.category}
                 </span>
                 <span style={{
+                  flexShrink: 0,
+                  width: 36,
+                  textAlign: "center",
                   fontFamily: "'Lexend Giga', sans-serif",
                   fontSize: "2.5rem",
                   color: "#7a5a5a",
                   transition: "transform 0.3s",
                   display: "inline-block",
                   transform: open === i ? "rotate(90deg)" : "rotate(0deg)",
-                  marginLeft: 8,
                 }}>
                   ›
                 </span>
               </button>
             </div>
           ))}
-        </div>
+      </div>
 
-        {/* Right content */}
-        <div style={{
+      {/* Right panel — blob background + content */}
+      <div
+        style={{
           flex: 1,
-          fontFamily: "'Lexend Giga', sans-serif",
-          fontSize: "clamp(0.8rem, 1.2vw, 0.98rem)",
-          fontWeight: 300,
-          color: "#4a3535",
-          lineHeight: 1.9,
-          paddingTop: 22,
-          minHeight: 160,
-          opacity: open !== null ? 1 : 0,
-          transition: "opacity 0.3s",
-        }}>
+          position: "relative",
+          overflow: "hidden",
+          background: "#f2c8c8",
+          padding: "80px 7% 80px 5%",
+        }}
+      >
+        <OmbreBlob
+          size={200}
+          blur={50}
+          opacity={0.65}
+          style={{ top: -90, right: -70, transform: "rotate(-12deg)" }}
+        />
+        <OmbreBlob
+          size={500}
+          blur={80}
+          opacity={0.75}
+          style={{ bottom: -180, right: -140 }}
+        />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            fontFamily: "'Lexend Giga', sans-serif",
+            fontSize: "clamp(0.8rem, 1.2vw, 0.98rem)",
+            fontWeight: 300,
+            color: "#4a3535",
+            lineHeight: 1.9,
+            minHeight: 160,
+            opacity: open !== null ? 1 : 0,
+            transition: "opacity 0.3s",
+          }}
+        >
           {open !== null && (
             <ul style={{ margin: 0, paddingLeft: "1.15rem" }}>
               {skills[open].items.split(",").map((item) => {

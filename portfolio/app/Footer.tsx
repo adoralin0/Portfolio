@@ -1,5 +1,7 @@
 "use client";
 
+import OmbreBlob from "./OmbreBlob";
+
 export default function Footer() {
   return (
     <footer
@@ -14,6 +16,12 @@ export default function Footer() {
         alignItems: "center",
       }}
     >
+      <OmbreBlob
+        size={480}
+        blur={80}
+        opacity={0.75}
+        style={{ top: -100, left: -80, zIndex: 0 }}
+      />
       {/* Center card */}
       <div
         style={{
@@ -27,6 +35,8 @@ export default function Footer() {
           justifyContent: "center",
           textAlign: "center",
           boxSizing: "border-box",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <p
@@ -73,6 +83,8 @@ export default function Footer() {
           flexDirection: "column",
           alignItems: "center",
           gap: 18,
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <span

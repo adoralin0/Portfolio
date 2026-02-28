@@ -71,6 +71,7 @@ export default function Page() {
         <div style={{ display: "flex", gap: 36 }}>
           {navLink("#home", "Home")}
           {navLink("#projects", "Projects")}
+          {navLink("#skills", "Skills")}
           {navLink("#contact", "Contact")}
         </div>
       </nav>

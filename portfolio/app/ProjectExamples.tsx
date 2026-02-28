@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 
+import OmbreBlob from "./OmbreBlob";
 import portfoliowareImg from "./portfolioware.png";
 import portfoliosipImg from "./portfoliosip.png";
 import portfoliouberImg from "./portfoliouber.png";
@@ -46,10 +47,19 @@ export default function ProjectExamples() {
   return (
     <section
       style={{
-        background: "#B9A59A",
+        background: "#f2c8c8",
         padding: "60px 5% 80px",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      {/* Blob — top-left, large (same as Hero) */}
+      <OmbreBlob
+        size={480}
+        blur={80}
+        opacity={0.75}
+        style={{ top: -100, left: -80, zIndex: 0 }}
+      />
       <div
         style={{
           display: "grid",
@@ -57,6 +67,8 @@ export default function ProjectExamples() {
           gap: "28px 32px",
           maxWidth: 1200,
           margin: "0 auto",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {examples.map((p, i) => (
