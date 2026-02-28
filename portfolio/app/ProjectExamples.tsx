@@ -109,8 +109,8 @@ export default function ProjectExamples() {
                     <span
                       key={t}
                       style={{
-                        background: "#111",
-                        color: "#f0ece8",
+                        background: "#E9D7CD",
+                        color: "#000",
                         fontFamily: "'Lexend Giga', sans-serif",
                         fontSize: "0.62rem",
                         fontWeight: 300,
@@ -178,12 +178,13 @@ export default function ProjectExamples() {
                     alignItems: "center",
                     justifyContent: "center",
                     color: "#000",
-                    fontSize: "1rem",
+                    fontSize: "2.35rem",
                     textDecoration: "none",
                     flexShrink: 0,
+                    paddingBottom: 6,
                   }}
                 >
-                  →
+                  ›
                 </a>
               </div>
             </div>
