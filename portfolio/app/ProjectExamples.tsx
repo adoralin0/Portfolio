@@ -87,6 +87,7 @@ export default function ProjectExamples() {
                     fill
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    unoptimized
                   />
                 )}
                 {/* Tag pills — bottom left */}

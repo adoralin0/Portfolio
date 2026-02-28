@@ -146,6 +146,7 @@ export default function Hero() {
             objectPosition: "center top",
           }}
           priority
+          unoptimized
         />
       </div>
 
