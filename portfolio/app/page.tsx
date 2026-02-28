@@ -38,33 +38,28 @@ export default function Page() {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "18px 6%",
+        minHeight: 70,
+        boxSizing: "border-box",
+        overflow: "visible",
         background: "rgba(245, 198, 198, 0.75)",
         backdropFilter: "blur(12px)",
         borderBottom: "1px solid rgba(200,160,160,0.2)",
       }}>
         {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div style={{
-            width: 34,
-            height: 34,
-            borderRadius: "50%",
-            border: "1.5px solid #4a3a3a",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "0.9rem",
-            color: "#4a3a3a",
-          }}>
-            A
-          </div>
-          <span style={{
-            fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "1rem",
-            color: "#4a3a3a",
-          }}>
+          <a
+            href="#home"
+            className="nav-link-hover"
+            style={{
+              fontFamily: "'Lexend Giga', sans-serif",
+              fontSize: "1rem",
+              color: "#4a3a3a",
+              textDecoration: "none",
+              letterSpacing: "0.04em",
+            }}
+          >
             Adora
-          </span>
+          </a>
         </div>
 
         {/* Links */}
