@@ -127,7 +127,7 @@ export default function Skills() {
             position: "relative",
             zIndex: 1,
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(0.8rem, 1.2vw, 0.98rem)",
+            fontSize: "clamp(1.25rem, 1.9vw, 1.55rem)",
             fontWeight: 300,
             color: "#4a3535",
             lineHeight: 1.9,

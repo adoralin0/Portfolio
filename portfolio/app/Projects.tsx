@@ -138,7 +138,7 @@ export default function Projects() {
             position: "relative",
             zIndex: 1,
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(0.8rem, 1.2vw, 0.98rem)",
+            fontSize: "clamp(0.95rem, 1.35vw, 1.12rem)",
             fontWeight: 300,
             color: "#4a3535",
             lineHeight: 1.9,
