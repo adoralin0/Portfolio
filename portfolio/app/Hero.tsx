@@ -108,6 +108,7 @@ export default function Hero() {
           download="Adora_Lin_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          className="download-resume-hover"
           style={{
             display: "inline-flex",
             alignItems: "center",

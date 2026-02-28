@@ -45,6 +45,7 @@ export default function Footer() {
 
         <a
           href="mailto:adoraloin@gmail.com"
+          className="footer-email-hover"
           style={{
             marginTop: 32,
             padding: "10px 46px",
@@ -91,6 +92,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/adora-lin-"
             target="_blank"
             rel="noopener noreferrer"
+            className="footer-icon-hover"
             style={{
               width: 34,
               height: 34,
@@ -112,6 +114,7 @@ export default function Footer() {
             href="https://github.com/adoralin0"
             target="_blank"
             rel="noopener noreferrer"
+            className="footer-icon-hover"
             style={{
               width: 34,
               height: 34,

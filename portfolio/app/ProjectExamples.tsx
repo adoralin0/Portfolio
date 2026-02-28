@@ -62,6 +62,7 @@ export default function ProjectExamples() {
         {examples.map((p, i) => (
           <div key={i}>
             <div
+              className="project-card-hover"
               style={{
                 background: "#E9D7CD",
                 borderRadius: 14,
@@ -153,6 +154,7 @@ export default function ProjectExamples() {
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="project-arrow-hover"
                   style={{
                     fontFamily: "'Lexend Giga', sans-serif",
                     width: 44,
@@ -167,13 +169,6 @@ export default function ProjectExamples() {
                     fontSize: "1rem",
                     textDecoration: "none",
                     flexShrink: 0,
-                    transition: "background 0.2s, border-color 0.2s",
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.12)";
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
                   }}
                 >
                   →

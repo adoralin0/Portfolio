@@ -12,6 +12,7 @@ export default function Page() {
   const navLink = (href: string, label: string) => (
     <a
       href={href}
+      className="nav-link-hover"
       style={{
         fontFamily: "'Lexend Giga', sans-serif",
         fontSize: "1rem",

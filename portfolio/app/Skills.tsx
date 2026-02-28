@@ -71,6 +71,7 @@ export default function Skills() {
             <div key={i}>
               <button
                 onClick={() => setOpen(open === i ? null : i)}
+                className="accordion-btn-hover"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -83,11 +84,12 @@ export default function Skills() {
                   textAlign: "left",
                 }}
               >
-                <span style={{
+                <span className="accordion-btn-text" style={{
                   fontFamily: "'Lexend Giga', sans-serif",
                   fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
                   fontWeight: 400,
                   color: "#4a3535",
+                  transition: "color 0.25s ease",
                 }}>
                   {s.category}
                 </span>
