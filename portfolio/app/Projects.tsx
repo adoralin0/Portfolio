@@ -138,7 +138,7 @@ export default function Projects() {
             position: "relative",
             zIndex: 1,
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(1.9rem, 2.7vw, 2.24rem)",
+            fontSize: "clamp(1.35rem, 2vw, 1.6rem)",
             fontWeight: 300,
             color: "#4a3535",
             lineHeight: 1.9,
@@ -148,7 +148,12 @@ export default function Projects() {
           }}
         >
           {open !== null && (
-            <ul style={{ margin: 0, paddingLeft: "1.15rem" }}>
+            <ul style={{
+              margin: 0,
+              paddingLeft: "1.5rem",
+              listStyleType: "disc",
+              listStylePosition: "outside",
+            }}>
               {projects[open].bullets.map((b) => (
                 <li key={b} style={{ marginBottom: 12 }}>
                   {b}
