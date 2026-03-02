@@ -1,6 +1,7 @@
 "use client";
 import Hero from "./Hero";
 import Projects from "./Projects";
+import PaperPanels from "./PaperPanels";
 import ProjectExamples from "./ProjectExamples";
 import Skills from "./Skills";
 import Footer from "./Footer";
@@ -75,6 +76,7 @@ export default function Page() {
       <div style={{ paddingTop: 70 }}>
         <Hero />
         <Projects />
+        <PaperPanels />
         <ProjectExamples />
         <Skills />
         <Footer />
