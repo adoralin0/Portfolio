@@ -50,7 +50,7 @@ export default function Footer() {
             margin: 0,
           }}
         >
-          Interested in<br />working with me?
+          Get in touch
         </p>
 
         <a
@@ -70,7 +70,7 @@ export default function Footer() {
             color: "#7a6c6d",
           }}
         >
-          Email
+          adoraloin@gmail.com
         </a>
       </div>
 

@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="home"
       style={{
-        minHeight: "100vh",
+        minHeight: "90vh",
         background: "#f2c8c8",
         display: "flex",
         position: "relative",
@@ -82,12 +82,18 @@ export default function Hero() {
           marginTop: 0,
         }}>
           I'm Adora Lin a<br />
-          <span style={{ display: "inline-block", minWidth: "2ch" }}>{displayed}</span>
-          <span style={{
-            display: "inline-block", width: 2, height: "0.85em",
-            background: "#3d2e2e", marginLeft: 3, verticalAlign: "middle",
-            animation: "blink 1s step-end infinite",
-          }} />
+          <span style={{ display: "inline-block", minWidth: "19ch" }}>
+            {displayed}
+            <span style={{
+              display: "inline-block",
+              width: 2,
+              height: "0.85em",
+              background: "#3d2e2e",
+              marginLeft: 3,
+              verticalAlign: "middle",
+              animation: "blink 1s step-end infinite",
+            }} />
+          </span>
         </h1>
 
         <p style={{
@@ -111,6 +117,7 @@ export default function Hero() {
         zIndex: 1,
         overflow: "hidden",
         marginTop: 40,
+        marginLeft: -150,
       }}>
         <Image
           src={adorapic}
