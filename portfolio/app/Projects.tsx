@@ -4,6 +4,14 @@ import OmbreBlob from "./OmbreBlob";
 
 const projects = [
   {
+    name: "Paper Panels",
+    bullets: [
+      "Cozy, studio Ghibli–inspired webcomic app for short reading sessions to fit the Design-a-thon theme: \"Designing for moments that are often overlooked, transitional, or uncomfortable.\"",
+      "Redesigned flows (home, library, panels, profile, shop) with a calmer, more intuitive UI.",
+      "Focus on horizontal reading, hierarchy, and tappable components to reduce clutter.",
+    ],
+  },
+  {
     name: "Ware Am I?",
     bullets: [
       "Designed and developed an arcade-style platformer featuring parkour mechanics, NPC interactions, and branching dialogue systems.",
