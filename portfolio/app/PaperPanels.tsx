@@ -62,9 +62,8 @@ export default function PaperPanels() {
             marginBottom: "2.2rem",
           }}
         >
-          A cozy, Figma-designed webcomic app for short, in‑between moments — a
-          calm, horizontal reading experience inspired by studio Ghibli
-          palettes.
+          A cozy, Figma-designed webcomic app for short, horizontal reading experience inspired by studio Ghibli
+          palettes and current comic apps on the market.
         </p>
 
         <div
