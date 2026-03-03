@@ -29,7 +29,7 @@ const examples = [
     title: "New Biz",
     subtitle: "Case Studies",
     tags: ["TailwindCSS", "Node.js"],
-    href: "https://docs.google.com/document/d/1Ioe44EisPRUUHcPQ475j2ZANhoR1yv3o1zZMI3gBYyM/edit?usp=sharing",
+    href: null,
     image: portfoliouberImg,
     imageBg: "linear-gradient(135deg, #0a1a08 0%, #1a3010 40%, #2a5020 100%)",
   },
@@ -37,7 +37,7 @@ const examples = [
     title: "College of Engineering Website",
     subtitle: "Legacy Microsite",
     tags: ["Typescript", "Figma"],
-    href: "https://college-of-engineering-microsite.vercel.app/",
+    href: null,
     image: portfoliocoeImg,
     imageBg: "linear-gradient(135deg, #030b25 0%, #061540 40%, #0a2060 100%)",
   },
@@ -158,34 +158,57 @@ export default function ProjectExamples() {
                     }}
                   >
                     {p.subtitle}
+                    {!p.href && " · work in progress"}
                   </div>
                 </div>
 
                 {/* Arrow button */}
-                <a
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-arrow-hover"
-                  style={{
-                    fontFamily: "'Lexend Giga', sans-serif",
-                    width: 44,
-                    height: 44,
-                    borderRadius: "50%",
-                    border: "1.5px solid #000",
-                    background: "transparent",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#000",
-                    fontSize: "2.35rem",
-                    textDecoration: "none",
-                    flexShrink: 0,
-                    paddingBottom: 6,
-                  }}
-                >
-                  ›
-                </a>
+                {p.href ? (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-arrow-hover"
+                    style={{
+                      fontFamily: "'Lexend Giga', sans-serif",
+                      width: 44,
+                      height: 44,
+                      borderRadius: "50%",
+                      border: "1.5px solid #000",
+                      background: "transparent",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#000",
+                      fontSize: "2.35rem",
+                      textDecoration: "none",
+                      flexShrink: 0,
+                      paddingBottom: 6,
+                    }}
+                  >
+                    ›
+                  </a>
+                ) : (
+                  <div
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: "50%",
+                      border: "1.5px solid #000",
+                      background: "transparent",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#000",
+                      fontSize: "2.35rem",
+                      flexShrink: 0,
+                      paddingBottom: 6,
+                      opacity: 0.5,
+                    }}
+                  >
+                    ›
+                  </div>
+                )}
               </div>
             </div>
           </div>
