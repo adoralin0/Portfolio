@@ -16,7 +16,7 @@ export default function Page() {
       className="nav-link-hover"
       style={{
         fontFamily: "'Lexend Giga', sans-serif",
-        fontSize: "1rem",
+        fontSize: "1.08rem",
         color: "#4a3a3a",
         textDecoration: "none",
         letterSpacing: "0.04em",
@@ -42,7 +42,7 @@ export default function Page() {
         minHeight: 70,
         boxSizing: "border-box",
         overflow: "visible",
-        background: "rgba(245, 198, 198, 0.75)",
+        background: "rgba(207, 193, 180, 0.72)",
         backdropFilter: "blur(12px)",
         borderBottom: "1px solid rgba(200,160,160,0.2)",
       }}>
@@ -53,7 +53,7 @@ export default function Page() {
             className="nav-link-hover"
             style={{
               fontFamily: "'Lexend Giga', sans-serif",
-              fontSize: "1rem",
+              fontSize: "1.08rem",
               color: "#4a3a3a",
               textDecoration: "none",
               letterSpacing: "0.04em",
@@ -65,8 +65,9 @@ export default function Page() {
 
         {/* Links */}
         <div style={{ display: "flex", gap: 36 }}>
-          {navLink("#home", "Home")}
+          {navLink("/", "Home")}
           {navLink("#projects", "Projects")}
+          {navLink("#paper-panels", "Highlights")}
           {navLink("#skills", "Skills")}
           {navLink("#contact", "Contact")}
         </div>
@@ -84,3 +85,4 @@ export default function Page() {
     </>
   );
 }
+

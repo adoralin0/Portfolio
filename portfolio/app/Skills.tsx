@@ -27,20 +27,25 @@ export default function Skills() {
   return (
     <section
       id="skills"
+      onMouseLeave={() => setOpen(null)}
       style={{
-        minHeight: "80vh",
+        scrollMarginTop: 80,
+        minHeight: "100vh",
         display: "flex",
         overflow: "hidden",
+        position: "relative",
       }}
     >
       {/* Left panel — solid E9D7CD */}
       <div
         style={{
-          flex: "0 0 42%",
-          minWidth: 280,
-          maxWidth: 480,
-          background: "#E9D7CD",
-          padding: "80px 5% 80px 7%",
+          flex: "0 0 46%",
+          minWidth: 320,
+          maxWidth: 560,
+          background: "#f0e3d3",
+          padding: "110px 4% 110px 7%",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <h2 style={{
@@ -56,7 +61,8 @@ export default function Skills() {
         {skills.map((s, i) => (
             <div key={i}>
               <button
-                onClick={() => setOpen(open === i ? null : i)}
+                onMouseEnter={() => setOpen(i)}
+                onFocus={() => setOpen(i)}
                 className="accordion-btn-hover"
                 style={{
                   display: "flex",
@@ -75,7 +81,7 @@ export default function Skills() {
                   flex: 1,
                   minWidth: 0,
                   fontFamily: "'Lexend Giga', sans-serif",
-                  fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
+                  fontSize: "clamp(1.35rem, 2.9vw, 1.85rem)",
                   fontWeight: 400,
                   color: "#4a3535",
                   transition: "color 0.25s ease",
@@ -100,34 +106,34 @@ export default function Skills() {
           ))}
       </div>
 
-      {/* Right panel — blob background + content */}
+      {/* Right panel */}
       <div
         style={{
           flex: 1,
           position: "relative",
+          zIndex: 1,
           overflow: "hidden",
-          background: "#f2c8c8",
-          padding: "80px 7% 80px 5%",
+          background: "#eacdc7",
+          padding: "110px 6% 110px 3.5%",
         }}
       >
         <OmbreBlob
-          size={200}
-          blur={50}
-          opacity={0.65}
-          style={{ top: -90, right: -70, transform: "rotate(-12deg)" }}
-        />
-        <OmbreBlob
-          size={500}
-          blur={80}
-          opacity={0.75}
-          style={{ bottom: -180, right: -140 }}
+          size={420}
+          blur={75}
+          opacity={0.62}
+          style={{
+            left: "46%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 0,
+          }}
         />
         <div
           style={{
             position: "relative",
             zIndex: 1,
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(1.25rem, 1.9vw, 1.55rem)",
+            fontSize: "clamp(1.35rem, 2.15vw, 1.8rem)",
             fontWeight: 300,
             color: "#4a3535",
             lineHeight: 1.9,

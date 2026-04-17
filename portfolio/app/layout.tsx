@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import NavAutoHide from "./NavAutoHide";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -26,8 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${cormorant.variable} ${playfair.variable} antialiased`}>
+        <NavAutoHide />
         {children}
       </body>
     </html>
   );
 }
+

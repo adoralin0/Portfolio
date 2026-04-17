@@ -1,14 +1,12 @@
 "use client";
-
 import OmbreBlob from "./OmbreBlob";
-
 export default function Footer() {
   return (
     <footer
       id="contact"
       style={{
-        background: "#f2c8c8",
-        padding: "80px 7% 90px",
+        background: "#eacdc7",
+        padding: "110px 7% 130px",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -17,18 +15,19 @@ export default function Footer() {
       }}
     >
       <OmbreBlob
-        size={480}
-        blur={80}
-        opacity={0.75}
-        style={{ top: -100, left: -80, zIndex: 0 }}
+        size={360}
+        blur={65}
+        opacity={0.5}
+        style={{ right: -80, bottom: -120, zIndex: 0 }}
       />
+
       {/* Center card */}
       <div
         style={{
           width: "100%",
-          maxWidth: 720,
-          background: "#DEBDBD",
-          padding: "70px 40px 80px",
+          maxWidth: 900,
+          background: "rgba(240, 227, 211, 0.72)",
+          padding: "82px 46px 90px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -42,7 +41,7 @@ export default function Footer() {
         <p
           style={{
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(1rem, 2vw, 1.3rem)",
+            fontSize: "clamp(1.45rem, 2.8vw, 2rem)",
             fontWeight: 300,
             letterSpacing: "0.12em",
             textTransform: "none",
@@ -57,13 +56,13 @@ export default function Footer() {
           href="mailto:adoraloin@gmail.com"
           className="footer-email-hover"
           style={{
-            marginTop: 32,
-            padding: "10px 46px",
-            borderRadius: 2,
+            marginTop: 42,
+            padding: "18px 62px",
+            borderRadius: 6,
             border: "1px solid #b59ea0",
-            background: "#f5e6e1",
+            background: "#ffffff",
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "0.8rem",
+            fontSize: "1.05rem",
             fontWeight: 300,
             letterSpacing: "0.14em",
             textDecoration: "none",
@@ -77,12 +76,12 @@ export default function Footer() {
       {/* Follow me row */}
       <div
         style={{
-          marginTop: 40,
+          marginTop: 56,
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: 18,
+          gap: 24,
           position: "relative",
           zIndex: 1,
         }}
@@ -90,7 +89,7 @@ export default function Footer() {
         <span
           style={{
             fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "0.75rem",
+            fontSize: "1rem",
             fontWeight: 300,
             letterSpacing: "0.16em",
             color: "#7f6f70",
@@ -99,24 +98,25 @@ export default function Footer() {
           follow me:
         </span>
 
-        <div style={{ display: "flex", gap: 26 }}>
+        <div style={{ display: "flex", gap: 34 }}>
           <a
             href="https://www.linkedin.com/in/adora-lin-"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-icon-hover"
             style={{
-              width: 34,
-              height: 34,
+              width: 54,
+              height: 54,
               borderRadius: "50%",
-              background: "#000",
+              background: "#e5e6d8",
+              border: "1px solid #cfc1b4",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#f5e6e1",
+              color: "#6e6464",
               textDecoration: "none",
               fontFamily: "'Lexend Giga', sans-serif",
-              fontSize: "0.7rem",
+              fontSize: "1rem",
             }}
           >
             in
@@ -128,20 +128,21 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="footer-icon-hover"
             style={{
-              width: 34,
-              height: 34,
+              width: 54,
+              height: 54,
               borderRadius: "50%",
-              background: "#000",
+              background: "#e5e6d8",
+              border: "1px solid #cfc1b4",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#f5e6e1",
+              color: "#6e6464",
               textDecoration: "none",
             }}
           >
             <svg
-              width="16"
-              height="16"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"
@@ -154,3 +155,4 @@ export default function Footer() {
     </footer>
   );
 }
+

@@ -2,7 +2,7 @@ import React from "react";
 
 /**
  * Ombre ellipse blob matching Adora's Figma design.
- * Linear gradient: dusty rose → sage green, rotated ~151°
+ * Linear gradient: lavender tones, rotated ~151°
  * Always position: absolute; parent must be position: relative + overflow: hidden.
  */
 interface BlobProps {
@@ -20,7 +20,7 @@ export default function OmbreBlob({ size = 488, opacity = 0.72, blur = 55, style
         width: size,
         height: size,
         borderRadius: "50%",
-        background: `linear-gradient(151deg,rgb(255, 67, 67) 0%, #b8c9a3 55%, #9fb88a 100%)`,
+        background: "linear-gradient(151deg, #eacdc7 0%, #f0e3d3 55%, #e5e6d8 100%)",
         opacity,
         filter: `blur(${blur}px)`,
         pointerEvents: "none",
@@ -30,3 +30,4 @@ export default function OmbreBlob({ size = 488, opacity = 0.72, blur = 55, style
     />
   );
 }
+

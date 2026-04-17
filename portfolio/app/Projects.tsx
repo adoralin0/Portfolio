@@ -1,179 +1,130 @@
 "use client";
-import { useState } from "react";
-import OmbreBlob from "./OmbreBlob";
+import Image from "next/image";
+import Link from "next/link";
+import sectionBg from "./Rectangle 29.png";
+import calendarMonthly from "./calendar_monthly (1).png";
+import calendarWeekly from "./calendar_weekly (1).png";
+import envelopeHeart from "./envelope_heart (1).png";
+import folder from "./folder (1).png";
 
-const projects = [
-  {
-    name: "Paper Panels",
-    bullets: [
-      "Cozy, studio Ghibli–inspired webcomic app for short reading sessions to fit the 2026 Design-a-thon theme: \"Designing for moments that are often overlooked, transitional, or uncomfortable.\"",
-      "Redesigned flows (home, library, panels, profile, shop) with a calmer, more intuitive UI.",
-      "Focus on horizontal reading, hierarchy, and tappable components to reduce clutter.",
-    ],
-  },
-  {
-    name: "Ware Am I?",
-    bullets: [
-      "Designed and developed an arcade-style platformer featuring parkour mechanics, NPC interactions, and branching dialogue systems.",
-      "Created and integrated 2D assets, animations, and UI elements to enhance player feedback.",
-      "Applied foundational game design principles such as level pacing, accessibility, and intuitive user interaction.",
-    ],
-  },
-  {
-    name: "Sip Safe",
-    bullets: [
-      "Developed a full-stack AI safety platform using the Gemini Vision API to analyze drink environments for potential contaminants, winning “Best Use of DigitalOcean” at WiNGHacks 2026.",
-      "Contributed to a backend using Node.js and MongoDB to manage user safety logs, integrating ElevenLabs TTS to provide immediate audio alerts for potential risk detections.",
-    ],
-  },
-  {
-    name: "New Biz - Case Studies",
-    bullets: [
-      "Translated complex design wireframes into scalable web pages using JavaScript and Tailwind CSS, improving site navigation and technical documentation for future clients.",
-    ],
-  },
-  {
-    name: "College of Engineering",
-    bullets: [
-      "Engineered interactive components for the UF College of Engineering Legacy website to catalog 100+ events.",
-    ],
-  },
+const projectCategories = [
+  { label: "Wireframes", href: "/wireframes", icon: folder },
+  { label: "Websites", href: "/websites", icon: envelopeHeart, offsetY: 36 },
+  { label: "Games", href: "/games", icon: calendarWeekly },
+  { label: "Hackathons", href: "/hackathons", icon: calendarMonthly },
 ];
 
 export default function Projects() {
-  const [open, setOpen] = useState<number | null>(null);
-
   return (
     <section
       id="projects"
       style={{
         minHeight: "100vh",
-        display: "flex",
-        overflow: "hidden",
+        backgroundColor: "#f0e3d3",
+        backgroundImage: `url(${sectionBg.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        padding: "110px 7% 110px",
       }}
     >
-      {/* Left panel — solid E9D7CD */}
-      <div
-        style={{
-          flex: "0 0 55%",
-          minWidth: 320,
-          maxWidth: 680,
-          background: "#E9D7CD",
-          padding: "80px 5% 80px 7%",
-        }}
-      >
-        <h2 style={{
-          fontFamily: "'Libre Caslon Text', Georgia, serif",
-          fontSize: "clamp(2.5rem, 6vw, 4rem)",
-          fontWeight: 400,
-          color: "#4a3535",
-          letterSpacing: "0.08em",
-          marginBottom: "2.5rem",
-        }}>
-          PROJECTS
-        </h2>
-        {projects.map((p, i) => (
-            <div key={i}>
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="accordion-btn-hover"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 12,
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  padding: "18px 0",
-                  width: "100%",
-                  textAlign: "left",
-                }}
-              >
-                <span className="accordion-btn-text" style={{
-                  flex: 1,
-                  minWidth: 0,
-                  fontFamily: "'Lexend Giga', sans-serif",
-                  fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)",
-                  fontWeight: 400,
-                  color: "#4a3535",
-                  transition: "color 0.25s ease",
-                }}>
-                  {p.name}
-                </span>
-                <span style={{
-                  flexShrink: 0,
-                  width: 36,
-                  textAlign: "center",
-                  fontFamily: "'Lexend Giga', sans-serif",
-                  fontSize: "2.5rem",
-                  color: "#7a5a5a",
-                  transition: "transform 0.3s",
-                  display: "inline-block",
-                  transform: open === i ? "rotate(90deg)" : "rotate(0deg)",
-                }}>
-                  ›
-                </span>
-              </button>
-            </div>
-          ))}
-      </div>
-
-      {/* Right panel — blob background + content */}
-      <div
-        style={{
-          flex: 1,
-          position: "relative",
-          overflow: "hidden",
-          background: "#f2c8c8",
-          padding: "80px 7% 80px 5%",
-        }}
-      >
-        <OmbreBlob
-          size={200}
-          blur={50}
-          opacity={0.65}
-          style={{ top: -90, right: -70, transform: "rotate(-12deg)" }}
-        />
-        <OmbreBlob
-          size={400}
-          blur={70}
-          opacity={0.6}
-          style={{ bottom: -120, right: -80 }}
-        />
-        <div
+      <div style={{ maxWidth: 1260, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <h2
           style={{
-            position: "relative",
-            zIndex: 1,
-            fontFamily: "'Lexend Giga', sans-serif",
-            fontSize: "clamp(1.35rem, 2vw, 1.6rem)",
-            fontWeight: 300,
+            fontFamily: "'Libre Caslon Text', Georgia, serif",
+            fontSize: "clamp(2.5rem, 6vw, 4rem)",
+            fontWeight: 400,
             color: "#4a3535",
-            lineHeight: 1.9,
-            minHeight: 200,
-            transition: "opacity 0.3s",
-            opacity: open !== null ? 1 : 0,
+            letterSpacing: "0.08em",
+            marginBottom: "2.5rem",
+            textAlign: "left",
+            width: "100%",
+            alignSelf: "flex-start",
+            marginLeft: "-13.5%",
           }}
         >
-          {open !== null && (
-            <ul style={{
-              margin: 0,
-              paddingLeft: "1.5rem",
-              listStyleType: "disc",
-              listStylePosition: "outside",
-            }}>
-              {projects[open].bullets.map((b) => (
-                <li key={b} style={{ marginBottom: 12 }}>
-                  {b}
-                </li>
-              ))}
-            </ul>
-          )}
+          PROJECTS
+        </h2>
+        <div
+          style={{
+            backgroundColor: "#ffffff",
+            border: "8px solid #cfc1b4",
+            borderRadius: 22,
+            padding: "18px",
+            maxWidth: 1120,
+            width: "100%",
+            margin: "0 auto",
+            boxShadow: "0 12px 26px rgba(83, 67, 112, 0.28)",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#ffffff",
+              border: "3px solid #cfc1b4",
+              borderRadius: 10,
+              padding: "58px 70px 64px",
+              position: "relative",
+            }}
+          >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+              gap: "56px 76px",
+            }}
+          >
+            {projectCategories.map((category) => (
+            <Link
+              key={category.href}
+              href={category.href}
+              className="desktop-icon-link"
+              style={{
+                textDecoration: "none",
+                color: "#4a3535",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 12,
+                fontFamily: "'Lexend Giga', sans-serif",
+                fontSize: "clamp(0.88rem, 1.4vw, 1.05rem)",
+                letterSpacing: "0.03em",
+                textAlign: "center",
+                transition: "transform 0.2s ease",
+                marginTop: category.offsetY ?? 0,
+              }}
+            >
+              <Image
+                src={category.icon}
+                alt={`${category.label} icon`}
+                width={210}
+                height={210}
+                className="desktop-icon-image"
+                style={{
+                  width: "min(38vw, 210px)",
+                  height: "auto",
+                  imageRendering: "pixelated",
+                  transition: "transform 0.2s ease",
+                }}
+                unoptimized
+              />
+              <span className="desktop-icon-label">{category.label}</span>
+            </Link>
+          ))}
+          </div>
+          </div>
         </div>
       </div>
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lexend+Giga:wght@100;200;300;400&display=swap');
+        .desktop-icon-link:hover {
+          transform: translateY(-4px);
+        }
+        .desktop-icon-link:hover .desktop-icon-image {
+          transform: scale(1.06);
+        }
+        .desktop-icon-link:hover .desktop-icon-label {
+          color: #2f5ea7;
+        }
       `}</style>
     </section>
   );
