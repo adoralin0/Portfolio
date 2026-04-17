@@ -50,23 +50,23 @@ export default function WebsitesPage() {
           borderBottom: "1px solid rgba(200,160,160,0.2)",
         }}
       >
-        <a href="https://adoralin0.github.io/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
+        <a href="/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
           Adora
         </a>
         <div style={{ display: "flex", gap: "clamp(12px, 2.4vw, 36px)" }}>
-          <a href="https://adoralin0.github.io/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
+          <a href="/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
             Home
           </a>
-          <a href="https://adoralin0.github.io/Portfolio/#projects" className="nav-link-hover" style={navLinkStyle}>
+          <a href="/Portfolio/#projects" className="nav-link-hover" style={navLinkStyle}>
             Projects
           </a>
-          <a href="https://adoralin0.github.io/Portfolio/#paper-panels" className="nav-link-hover" style={navLinkStyle}>
+          <a href="/Portfolio/#paper-panels" className="nav-link-hover" style={navLinkStyle}>
             Highlights
           </a>
-          <a href="https://adoralin0.github.io/Portfolio/#skills" className="nav-link-hover" style={navLinkStyle}>
+          <a href="/Portfolio/#skills" className="nav-link-hover" style={navLinkStyle}>
             Skills
           </a>
-          <a href="https://adoralin0.github.io/Portfolio/#contact" className="nav-link-hover" style={navLinkStyle}>
+          <a href="/Portfolio/#contact" className="nav-link-hover" style={navLinkStyle}>
             Contact
           </a>
         </div>
