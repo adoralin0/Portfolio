@@ -39,16 +39,16 @@ export default function WireframesPage() {
           <a href="https://adoralin0.github.io/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
             Home
           </a>
-          <a href="/#projects" className="nav-link-hover" style={navLinkStyle}>
+          <a href="https://adoralin0.github.io/Portfolio/#projects" className="nav-link-hover" style={navLinkStyle}>
             Projects
           </a>
-          <a href="/#paper-panels" className="nav-link-hover" style={navLinkStyle}>
+          <a href="https://adoralin0.github.io/Portfolio/#paper-panels" className="nav-link-hover" style={navLinkStyle}>
             Highlights
           </a>
-          <a href="/#skills" className="nav-link-hover" style={navLinkStyle}>
+          <a href="https://adoralin0.github.io/Portfolio/#skills" className="nav-link-hover" style={navLinkStyle}>
             Skills
           </a>
-          <a href="/#contact" className="nav-link-hover" style={navLinkStyle}>
+          <a href="https://adoralin0.github.io/Portfolio/#contact" className="nav-link-hover" style={navLinkStyle}>
             Contact
           </a>
         </div>
@@ -183,7 +183,7 @@ export default function WireframesPage() {
                 unoptimized
               />
               <Link
-                href="/#paper-panels"
+                href="https://adoralin0.github.io/Portfolio/#paper-panels"
                 aria-label="Open Paper Panels section"
                 style={{
                   position: "absolute",
@@ -216,7 +216,7 @@ export default function WireframesPage() {
               </div>
 
               <Link
-                href="/#paper-panels"
+                href="https://adoralin0.github.io/Portfolio/#paper-panels"
                 className="project-arrow-hover"
                 style={{
                   fontFamily: "'Lexend Giga', sans-serif",
