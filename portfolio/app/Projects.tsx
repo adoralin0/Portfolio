@@ -36,10 +36,7 @@ export default function Projects() {
             color: "#4a3535",
             letterSpacing: "0.08em",
             marginBottom: "2.5rem",
-            textAlign: "left",
-            width: "100%",
-            alignSelf: "flex-start",
-            marginLeft: "-13.5%",
+            textAlign: "center",
           }}
         >
           PROJECTS

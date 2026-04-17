@@ -14,7 +14,7 @@ const gameProjects = [
 export default function GamesPage() {
   const navLinkStyle = {
     fontFamily: "'Lexend Giga', sans-serif",
-    fontSize: "1.08rem",
+    fontSize: "clamp(0.9rem, 1.2vw, 1.08rem)",
     color: "#4a3a3a",
     textDecoration: "none",
     letterSpacing: "0.04em",
@@ -32,7 +32,7 @@ export default function GamesPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "18px 6%",
+          padding: "clamp(12px, 2vw, 18px) clamp(4%, 6vw, 6%)",
           minHeight: 70,
           boxSizing: "border-box",
           background: "rgba(207, 193, 180, 0.72)",
@@ -40,11 +40,11 @@ export default function GamesPage() {
           borderBottom: "1px solid rgba(200,160,160,0.2)",
         }}
       >
-        <a href="/" className="nav-link-hover" style={navLinkStyle}>
+        <a href="https://adoralin0.github.io/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
           Adora
         </a>
-        <div style={{ display: "flex", gap: 36 }}>
-          <a href="/" className="nav-link-hover" style={navLinkStyle}>
+        <div style={{ display: "flex", gap: "clamp(12px, 2.4vw, 36px)" }}>
+          <a href="https://adoralin0.github.io/Portfolio/" className="nav-link-hover" style={navLinkStyle}>
             Home
           </a>
           <a href="/#projects" className="nav-link-hover" style={navLinkStyle}>

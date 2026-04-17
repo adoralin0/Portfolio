@@ -38,8 +38,9 @@ export default function Hero() {
   return (
     <section
       id="home"
+      className="hero-section"
       style={{
-        minHeight: "96vh",
+        minHeight: "clamp(640px, 96vh, 1100px)",
         background: "#eacdc7",
         display: "flex",
         position: "relative",
@@ -63,18 +64,21 @@ export default function Hero() {
       />
 
       {/* Left content */}
-      <div style={{
-        flex: "0 0 55%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: "0 5% 0 6%",
-        zIndex: 2,
-        position: "relative",
-      }}>
+      <div
+        className="hero-left"
+        style={{
+          flex: "0 0 55%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          padding: "0 clamp(20px, 5vw, 72px) 0 clamp(20px, 6vw, 88px)",
+          zIndex: 2,
+          position: "relative",
+        }}
+      >
         <h1 style={{
           fontFamily: "'Libre Caslon Text', Georgia, serif",
-          fontSize: "clamp(3.2rem, 6.6vw, 5.3rem)",
+          fontSize: "clamp(2.7rem, 5.8vw, 5.3rem)",
           fontWeight: 400,
           color: "#3d2e2e",
           lineHeight: 1.15,
@@ -82,7 +86,7 @@ export default function Hero() {
           marginTop: 0,
         }}>
           I'm Adora Lin a<br />
-          <span style={{ display: "inline-block", minWidth: "19ch" }}>
+          <span className="hero-typing" style={{ display: "inline-block", minWidth: "19ch" }}>
             {displayed}
             <span style={{
               display: "inline-block",
@@ -98,11 +102,11 @@ export default function Hero() {
 
         <p style={{
           fontFamily: "'Lexend Giga', sans-serif",
-          fontSize: "clamp(1.08rem, 1.8vw, 1.35rem)",
+          fontSize: "clamp(0.95rem, 1.5vw, 1.35rem)",
           fontWeight: 300,
           color: "#5a4040",
           lineHeight: 2,
-          maxWidth: 460,
+          maxWidth: "clamp(300px, 42vw, 520px)",
           marginBottom: "2.8rem",
           letterSpacing: "0.01em",
         }}>
@@ -111,18 +115,22 @@ export default function Hero() {
       </div>
 
       {/* Right — full-bleed photo, no card/border */}
-      <div style={{
-        flex: "0 0 45%",
-        position: "relative",
-        zIndex: 1,
-        overflow: "hidden",
-        marginTop: 40,
-        marginLeft: -150,
-      }}>
+      <div
+        className="hero-right"
+        style={{
+          flex: "0 0 45%",
+          position: "relative",
+          zIndex: 1,
+          overflow: "hidden",
+          marginTop: "clamp(12px, 3vw, 40px)",
+          marginLeft: "clamp(-190px, -12vw, -40px)",
+        }}
+      >
         <Image
           src={adorapic}
           alt="Adora Lin"
           fill
+          className="hero-photo"
           style={{
             objectFit: "cover",
             objectPosition: "center top",
@@ -135,6 +143,27 @@ export default function Hero() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Lexend+Giga:wght@100;200;300;400&display=swap');
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        @media (max-width: 980px) {
+          .hero-section {
+            min-height: auto !important;
+          }
+          .hero-left {
+            flex: 1 1 auto !important;
+            width: 100%;
+            padding: clamp(88px, 14vw, 126px) clamp(20px, 8vw, 44px) clamp(32px, 8vw, 64px) !important;
+          }
+          .hero-typing {
+            min-width: 14ch !important;
+          }
+          .hero-right {
+            display: none !important;
+          }
+        }
+        @media (max-width: 760px) {
+          .hero-typing {
+            min-width: 12ch !important;
+          }
+        }
       `}</style>
     </section>
   );

@@ -16,7 +16,7 @@ export default function Page() {
       className="nav-link-hover"
       style={{
         fontFamily: "'Lexend Giga', sans-serif",
-        fontSize: "1.08rem",
+        fontSize: "clamp(0.9rem, 1.2vw, 1.08rem)",
         color: "#4a3a3a",
         textDecoration: "none",
         letterSpacing: "0.04em",
@@ -38,7 +38,7 @@ export default function Page() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "18px 6%",
+        padding: "clamp(12px, 2vw, 18px) clamp(4%, 6vw, 6%)",
         minHeight: 70,
         boxSizing: "border-box",
         overflow: "visible",
@@ -49,11 +49,11 @@ export default function Page() {
         {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <a
-            href="#home"
+            href="https://adoralin0.github.io/Portfolio/"
             className="nav-link-hover"
             style={{
               fontFamily: "'Lexend Giga', sans-serif",
-              fontSize: "1.08rem",
+              fontSize: "clamp(0.9rem, 1.2vw, 1.08rem)",
               color: "#4a3a3a",
               textDecoration: "none",
               letterSpacing: "0.04em",
@@ -64,8 +64,8 @@ export default function Page() {
         </div>
 
         {/* Links */}
-        <div style={{ display: "flex", gap: 36 }}>
-          {navLink("/", "Home")}
+        <div style={{ display: "flex", gap: "clamp(12px, 2.4vw, 36px)" }}>
+          {navLink("https://adoralin0.github.io/Portfolio/", "Home")}
           {navLink("#projects", "Projects")}
           {navLink("#paper-panels", "Highlights")}
           {navLink("#skills", "Skills")}

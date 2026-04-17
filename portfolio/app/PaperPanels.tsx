@@ -39,7 +39,7 @@ export default function PaperPanels() {
             color: "#4a3535",
             letterSpacing: "0.08em",
             marginBottom: "2.5rem",
-            paddingLeft: "5.5%",
+            textAlign: "center",
           }}
         >
           HIGHLIGHTS

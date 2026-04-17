@@ -52,6 +52,7 @@ export default function ProjectExamples() {
       }}
     >
       <div
+        className="project-window"
         style={{
           maxWidth: 1360,
           margin: "0 auto",
@@ -65,6 +66,7 @@ export default function ProjectExamples() {
         }}
       >
         <div
+          className="project-window-inner"
           style={{
             background: "#f0e3d3",
             border: "3px solid #cfc1b4",
@@ -88,6 +90,7 @@ export default function ProjectExamples() {
             <span style={{ width: 16, height: 16, borderRadius: "50%", background: "#eacdc7", border: "4px solid #cfc1b4", boxSizing: "border-box" }} />
           </div>
           <div
+            className="project-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(2, 1fr)",
@@ -109,6 +112,7 @@ export default function ProjectExamples() {
             >
               {/* Image area */}
               <div
+                className="project-card-image"
                 style={{
                   height: 330,
                   background: p.imageBg,
@@ -265,6 +269,32 @@ export default function ProjectExamples() {
         .project-card-hover:hover .project-card-tags {
           opacity: 1;
           transform: translateY(0);
+        }
+        @media (max-width: 1100px) {
+          .project-window-inner {
+            padding: 46px 14px 24px !important;
+          }
+          .project-grid {
+            gap: 34px 36px !important;
+          }
+          .project-card-image {
+            height: clamp(190px, 25vw, 260px) !important;
+          }
+        }
+        @media (max-width: 760px) {
+          .project-window {
+            padding: 12px !important;
+          }
+          .project-window-inner {
+            padding: 40px 10px 16px !important;
+          }
+          .project-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+          }
+          .project-card-image {
+            height: clamp(220px, 52vw, 300px) !important;
+          }
         }
       `}</style>
     </section>
