@@ -66,10 +66,10 @@ export default function Page() {
         {/* Links */}
         <div style={{ display: "flex", gap: "clamp(12px, 2.4vw, 36px)" }}>
           {navLink("https://adoralin0.github.io/Portfolio/", "Home")}
-          {navLink("#projects", "Projects")}
-          {navLink("#paper-panels", "Highlights")}
-          {navLink("#skills", "Skills")}
-          {navLink("#contact", "Contact")}
+          {navLink("https://adoralin0.github.io/Portfolio/#projects", "Projects")}
+          {navLink("https://adoralin0.github.io/Portfolio/#paper-panels", "Highlights")}
+          {navLink("https://adoralin0.github.io/Portfolio/#skills", "Skills")}
+          {navLink("https://adoralin0.github.io/Portfolio/#contact", "Contact")}
         </div>
       </nav>
 
