@@ -39,8 +39,8 @@ export default function Hero() {
     <section
       id="home"
       style={{
-        minHeight: "90vh",
-        background: "#f2c8c8",
+        minHeight: "96vh",
+        background: "#eacdc7",
         display: "flex",
         position: "relative",
         overflow: "hidden",
@@ -74,7 +74,7 @@ export default function Hero() {
       }}>
         <h1 style={{
           fontFamily: "'Libre Caslon Text', Georgia, serif",
-          fontSize: "clamp(2.6rem, 5.5vw, 4.4rem)",
+          fontSize: "clamp(3.2rem, 6.6vw, 5.3rem)",
           fontWeight: 400,
           color: "#3d2e2e",
           lineHeight: 1.15,
@@ -98,7 +98,7 @@ export default function Hero() {
 
         <p style={{
           fontFamily: "'Lexend Giga', sans-serif",
-          fontSize: "clamp(0.85rem, 1.3vw, 1.05rem)",
+          fontSize: "clamp(1.08rem, 1.8vw, 1.35rem)",
           fontWeight: 300,
           color: "#5a4040",
           lineHeight: 2,
@@ -106,7 +106,7 @@ export default function Hero() {
           marginBottom: "2.8rem",
           letterSpacing: "0.01em",
         }}>
-          I'm a sophomore at UF passionate about UX/UI design, game development, and software engineering.
+          I'm a sophomore at the University of Florida passionate about UX/UI design, game development, and software engineering.
         </p>
       </div>
 
