@@ -11,7 +11,7 @@ const examples = [
     title: "New Biz",
     subtitle: "Case Studies",
     tags: ["TailwindCSS", "Node.js"],
-    href: "/websites/new-biz",
+    href: "https://adoralin0.github.io/Portfolio/websites/new-biz",
     image: portfoliouberImg,
     imageBg: "linear-gradient(135deg, #f0e3d3 0%, #eacdc7 40%, #cfc1b4 100%)",
   },
