@@ -63,6 +63,20 @@ export default function Projects() {
             }}
           >
           <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: 14,
+              right: 16,
+              display: "flex",
+              gap: 10,
+            }}
+          >
+            <span style={{ width: 16, height: 16, borderRadius: "50%", background: "#ffffff", border: "4px solid #cfc1b4", boxSizing: "border-box" }} />
+            <span style={{ width: 16, height: 16, borderRadius: "50%", background: "#f0e3d3", border: "4px solid #cfc1b4", boxSizing: "border-box" }} />
+            <span style={{ width: 16, height: 16, borderRadius: "50%", background: "#eacdc7", border: "4px solid #cfc1b4", boxSizing: "border-box" }} />
+          </div>
+          <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
