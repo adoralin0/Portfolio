@@ -123,7 +123,7 @@ export default function Hero() {
           zIndex: 1,
           overflow: "hidden",
           marginTop: "clamp(12px, 3vw, 40px)",
-          marginLeft: "clamp(-190px, -12vw, -40px)",
+          marginLeft: "clamp(-250px, -15vw, -95px)",
         }}
       >
         <Image
